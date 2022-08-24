@@ -1,0 +1,21 @@
+# logs
+logs
+*.log
+yarn-debuge.log*
+yarn-error.log*
+node_modules
+build
+.storybook
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+
+.env
+
+#ts output cache
+tsconfig*tsbuldinfo
+
+# Конфликт с бизнес неймингом 
+!src/**/logs
