@@ -1,40 +1,20 @@
-import React from 'react'
-import { ChakraProvider } from '@chakra-ui/react'
-import { extendTheme } from '@chakra-ui/react'
+import React from 'react';
+import { ChakraProvider } from '@chakra-ui/provider';
+import { theme } from '@chakra-ui/react';
+import { ThemeColorSwitcher } from '@features/theme-color-toggle';
+import { RouterProvider } from 'atomic-router-react';
+import { router } from './router';
+import { Pages } from '@pages/index';
 
-
-const colors = {
-    brand: {
-      900: '#1a365d',
-      800: '#153e75',
-      700: '#2a69ac',
-    },
-  }
-  
-  const theme = extendTheme({ colors },
-    {
-      fonts: {
-        heading: 'Roboto',
-        body: 'Roboto',
-      },
-      capHeights: {
-        sm: 10,
-        md: 14,
-        lg: 18,
-        xl: 24,
-      },
-    },
-  )
-
-  
 export const App = () => {
-
   return (
     <React.StrictMode>
-    <ChakraProvider theme={theme}>
-       <></>    
-    </ChakraProvider>
-  </React.StrictMode>
-  )
-}
-
+      <ChakraProvider theme={theme}>
+        <RouterProvider router={router}>
+          <Pages />
+        </RouterProvider>
+        <ThemeColorSwitcher />
+      </ChakraProvider>
+    </React.StrictMode>
+  );
+};
