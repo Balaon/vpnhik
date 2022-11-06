@@ -1,9 +1,6 @@
-import effector from 'effector';
+import { createDomain, createStore } from 'effector';
 
-const domain = effector.createDomain('entities/home');
-
-type Maybe<T> = T | null;
-
+const domain = createDomain('entities/home');
 interface State {
   statistics: {
     memberCount: Maybe<number>;
@@ -16,6 +13,6 @@ const state: State = {
   },
 };
 
-const slice = effector.createStore(state, { name: domain.shortName });
+const slice = createStore(state, { name: domain.shortName });
 
 export type Slice = typeof slice;

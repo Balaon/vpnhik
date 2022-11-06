@@ -1,7 +1,3 @@
-import { createRoute, createRouterControls } from 'atomic-router';
-
-export const routes = {
-  main: createRoute(),
-};
-
-export const routerControl = createRouterControls();
+export * from './router-provider';
+export * from './link';
+export * from './create-routes-view';
