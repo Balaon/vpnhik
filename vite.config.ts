@@ -2,7 +2,6 @@ import { defineConfig } from 'vite'
 import path from 'node:path'
 import react from '@vitejs/plugin-react'
 import eslint from 'vite-plugin-eslint'
-// import svgr from 'vite-plugin-svgr';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -16,5 +15,11 @@ export default defineConfig({
       "@shared": path.resolve(__dirname, "./src/shared"),
     },
   },
+  server: {
+    hmr: {
+      overlay: false, // отображдение ошибок поверх контента страницы
+    }
+  }
+
 })
 

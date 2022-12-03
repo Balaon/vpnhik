@@ -1,9 +1,11 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ESNext",//узнать разницу с ES2020
+    "noImplicitAny": true, //+
+    "importsNotUsedAsValues": "error",
+    "allowJs": false,
     "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "allowJs": false,
     "skipLibCheck": true,
     "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
@@ -16,15 +18,15 @@
     "noEmit": true,
     "jsx": "preserve",
     "types": ["node"],
-    "baseUrl": "./",
+    "baseUrl": "./src",
     "paths": {
-      "@features/*": ["src/features/*"],
-      "@app/*": ["src/app/*"],
-      "@pages/*": ["src/pages/*"],
-      "@entities/*": ["./src/entities/*"],
-      "@shared/*": [ "./src/shared/*"],
+      "@features/*": ["features/*"],
+      "@app/*": ["app/*"],
+      "@pages/*": ["pages/*"],
+      "@entities/*": ["entities/*"],
+      "@shared/*": [ "shared/*"],
     },
   },
   "include": ["src", "typings"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "references": [{ "path": "./tsconfig.node.json" }],
 }

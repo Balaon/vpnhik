@@ -1,4 +1,4 @@
-import { Scope } from 'effector';
+import type { Scope } from 'effector';
 
 //TODO: убрфть appStore, добавить инициализацию страницб в которую будет пробразываться актуальный скоп приложения
 export const appScope = (() => ({

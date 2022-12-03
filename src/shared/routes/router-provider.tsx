@@ -1,4 +1,4 @@
-import { createHistoryRouter } from 'atomic-router';
+import type { createHistoryRouter } from 'atomic-router';
 import React, { createContext, ReactNode, useContext } from 'react';
 
 type Router = ReturnType<typeof createHistoryRouter>;

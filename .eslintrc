@@ -1,9 +1,29 @@
 {
     "root": true,
     "parser": "@typescript-eslint/parser",
-    "plugins": ["@typescript-eslint"],
+    "plugins": ["@typescript-eslint", "formatjs"],
     "extends": [
       "plugin:@typescript-eslint/recommended",
       "plugin:prettier/recommended"
-    ]
+    ],
+    "rules":{ 
+       "formatjs/no-offset": "error",
+      "no-restricted-imports":[
+        "error",
+        {
+          "paths":[
+            {
+              "name": "effector-react",
+              "message": "Please import from 'effector-react/scope' for not loosing scope",
+            }
+          ]
+        }
+      ],
+      "camelcase":"error",
+      },
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    }
   }

@@ -1,5 +1,5 @@
-import { useStore } from 'effector-react';
-import { RouteInstance } from 'atomic-router';
+import { useStore } from 'effector-react/scope';
+import type { RouteInstance } from 'atomic-router';
 
 export function useIsOpened(route: RouteInstance<any> | RouteInstance<any>[]) {
   return Array.isArray(route)

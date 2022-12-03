@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { useStore, useEvent } from 'effector-react';
+import { useStore, useEvent } from 'effector-react/scope';
 import { buildPath, RouteParams, RouteQuery, RouteInstance } from 'atomic-router';
 import React, { AnchorHTMLAttributes, ForwardedRef, forwardRef } from 'react';
 
